@@ -1,8 +1,8 @@
 # -*- coding:utf8 -*-
-import stock_analysis as sa
+import stockanalysis as sa
 import os
 import datetime
-from stock_analysis import glbdata
+from stockanalysis import glbdata
 import tushare as ts
 import pandas as pd
 import multiprocessing
@@ -12,7 +12,7 @@ import string
 if __name__ == '__main__':
     validation = multiprocessing.Manager().list([('000000', False)])
     # Read in stock code
-    stock_code_list = pd.read_csv('../data/stock_code.csv')
+    stock_code_list = pd.read_csv(os.getenv('TRADERHOME')+'container/puretxt/stock_code.csv')
     i = 1
 
     #start_date = datetime.date(2014, 1, 5)
@@ -43,8 +43,8 @@ if __name__ == '__main__':
 
         for code in stock_code_list['CODE']:
             if (True):#code>600000 and code<600200):
-                if (os.path.exists('../data/'+str(code))==False):
-                    os.mkdir('../data/'+str(code))
+                if (os.path.exists(os.getenv('TRADERHOME')+'/container/puretxt/data/'+str(code))==False):
+                    os.mkdir(os.getenv('TRADERHOME')+'/container/puretxt/data/'+str(code))
                 #file_name = '../data/'+code+'/'+'basic.txt'
                 #fw = open(file_name,'w')
 
@@ -71,5 +71,5 @@ if __name__ == '__main__':
             validation_loc.append(validation[i])
         validation_list = pd.DataFrame(validation_loc, columns=['CODE','VALID'])
 
-        validation_list.to_csv('../data/stock_code_validation.csv')
-        os.system('shutdown -s -t 30')
+        validation_list.to_csv(os.getenv('TRADERHOME')+'/container/puretxt/data/stock_code_validation.csv')
+        #os.system('shutdown -s -t 30')

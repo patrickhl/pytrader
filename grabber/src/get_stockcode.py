@@ -1,7 +1,7 @@
 # -*- coding:utf8 -*-
 import requests as rq
 import re
-
+import os
 
 # Get all stock code for sh and sz
 stocklist_html = rq.get('http://quote.eastmoney.com/stocklist.html')
@@ -14,14 +14,14 @@ all_stock = re.findall('\([0-9]{6}\)</a></li>',html)
 #    print(str[1:6])
 
 # Store in file
-f = open('./stock_code.txt','w')
+f = open(os.getenv('TRADERHOME')+'/container/puretxt/stock_code.txt','w')
 for stock in all_stock:
     ss = stock.encode('ascii')
     f.write(ss[1:7]+'\n')
 
 f.close()
 
-f = open('./stock_code.csv','w')
+f = open(os.getenv('TRADERHOME')+'/container/puretxt/stock_code.csv','w')
 f.write(',CODE\n')
 i = 0
 for stock in all_stock:

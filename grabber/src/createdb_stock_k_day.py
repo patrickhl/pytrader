@@ -11,6 +11,7 @@ import tushare as ts
 import pymongo as mg
 import json as js
 import pandas as pd
+# connect to the default host:port
 client = mg.MongoClient('localhost', 27017)
 dbg = 0
 
