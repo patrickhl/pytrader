@@ -1,0 +1,3 @@
+export TRADERHOME=/proj/pytrader
+export PATH=$PATH:$TRADERHOME
+export PYTHONPATH=$TRADERHOME

@@ -1,0 +1,13 @@
+//--------------------------------------------------//
+// Document of the python package pymongo           //
+// Contents:                                        //
+// 1, how mongodb works                             //
+// 2, how to create db                              //
+// 3, how to insert element                         //
+//
+
+//-- 1, how mongodb works --//
+# load lib
+import pymongo as mg
+# define the host and port
+client = mg.MongoClient('localhost','27017')

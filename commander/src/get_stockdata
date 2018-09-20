@@ -1,0 +1,2 @@
+echo "Grabbing all stock data"
+python $TRADERHOME/grabber/src/get_stockdata.py

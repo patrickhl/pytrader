@@ -1,0 +1,2 @@
+echo "Grabbing all stock code"
+python $TRADERHOME/grabber/src/get_stockcode.py
