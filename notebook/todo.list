@@ -1,15 +1,16 @@
 # This is the to-do list for developing the pytrader
 # mark can be: 
 # P*: tasks' priority
-# OK: finished
-# PENDING: started but not finished
+# DONE: finished
+# PEND: started but not finished
 # TODO: new task
 # Date: updated date
 
 # Task list:
 
-1, [P0,TODO,SEP20] create functions to fetch data in a trading day
+1, [P0,DONE,SEP23] create functions to fetch data in a trading day
     a, functions are finished, copy and cleanup code
+       [comment]: finished two funcs for getting inday data and money flow
 2, [P0,TODO,SEP20] create functions to fetch history k-day data, save in files, not database
     a, most are finished, need to collect and cleanup
 3, [P0,TODO,SEP20] create functions to call wechat
