@@ -9,14 +9,19 @@
 # Task list:
 
 1, [P0,TODO,SEP20] create functions to fetch data in a trading day
-    a, functions are finished, copy and cleanup code
+    [OK]a, functions are finished, copy and cleanup code
 2, [P0,TODO,SEP20] create functions to fetch history k-day data, save in files, not database
-    a, most are finished, need to collect and cleanup
-3, [P0,TODO,SEP20] create functions to call wechat
+    [OK]a, most are finished, need to collect and cleanup
+3, [P1,TODO,SEP20] create functions to call wechat
+    [PENDING]a, give a simple test first
+    [PENDING]b, send summary everyday  
+4, [p0,TODO,SEP20] eval model to select candidates
+    a, evaluate different metrics, and think about how to reduce the calculations
+5, [p1,TODO,SEP20] eval model to decide buy/sell price
+    a, this relays on the eval result from 4.a
+6, [p1,TODO,SEP20] create routine arch
     a, give a simple test first
-    b, send summary everyday  
-4, [p1,TODO,SEP20] eval model to select candidates
-5, [p1,TODO,SEP20] eval model to decide sell price
-6, [p2,TODO,SEP20] create routine arch
-    a, give a simple test first
-    b, add feature
+    b, add eval model
+7, [p0,TODO,MAR10] parallel processing arch
+    a, create speed up arch, general method/arch to speed up functions
+        (fetch, eval, etc...)
